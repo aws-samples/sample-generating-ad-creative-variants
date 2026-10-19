@@ -1,0 +1,52 @@
+{
+  "_about": "Ad-industry prompt variations for Aurora editor-only inference on free Mixkit ad-commercial clips (Mixkit Free License, commercial use OK). Story: one source shoot -> many campaign variations without a reshoot. Each variation maps to a real advertising use case: colorway/SKU A-B, seasonal/holiday campaign, market localization, daypart (day vs night), and brand-grade tone matching.",
+  "_cfg_guidance": "text_cfg=2.0 always. image_cfg=1.0 for weather/color/material/effects/relight/combined; image_cfg=1.5-2.0 for background swaps and full stylization.",
+  "_run_hint": "python run_single_sample.py --video <video> --prompt <prompt> --out <out> --image_cfg_scale <image_cfg>",
+  "clips": [
+    {
+      "id": 805,
+      "genre": "fashion / apparel commercial",
+      "source_url": "https://assets.mixkit.co/videos/805/805-1080.mp4",
+      "video": "samples/raw/ad/fashion_dress_805_9s.mp4",
+      "description": "Woman modeling a short black dress in a studio",
+      "variations": [
+        {"use_case": "Colorway A/B (SKU variant)", "subtask": "change_color", "image_cfg": 1.0, "prompt": "change her dress from black to a deep ruby red"},
+        {"use_case": "Brand grade (luxury editorial)", "subtask": "global_style", "image_cfg": 2.0, "prompt": "apply a high-fashion editorial black-and-white grade with rich contrast"}
+      ]
+    },
+    {
+      "id": 44546,
+      "genre": "automotive commercial",
+      "source_url": "https://assets.mixkit.co/videos/44546/44546-1080.mp4",
+      "video": "samples/raw/ad/auto_camaro_44546_9s.mp4",
+      "description": "Stylish woman posing with a Camaro sports car",
+      "variations": [
+        {"use_case": "Selective color (color splash hero)", "subtask": "global_style", "image_cfg": 2.0, "prompt": "keep the car and the woman in full vivid color while turning the entire background and surroundings black and white"},
+        {"use_case": "Daypart (premium night spot)", "subtask": "change_weather", "image_cfg": 1.0, "prompt": "make it a rainy downtown night with neon reflections on wet asphalt"},
+        {"use_case": "Colorway (vehicle SKU variant, fallback)", "subtask": "change_color", "image_cfg": 1.0, "prompt": "repaint the car in glossy metallic midnight blue"}
+      ]
+    },
+    {
+      "id": 40766,
+      "genre": "sportswear / athletic commercial",
+      "source_url": "https://assets.mixkit.co/videos/40766/40766-1080.mp4",
+      "video": "samples/raw/ad/sportswear_jogger_40766_9s.mp4",
+      "description": "Man jogging on a city pedestrian bridge",
+      "variations": [
+        {"use_case": "Colorway (apparel SKU variant)", "subtask": "change_color", "image_cfg": 1.0, "prompt": "change his running top to bright neon volt yellow"},
+        {"use_case": "Seasonal campaign (autumn)", "subtask": "change_weather", "image_cfg": 1.0, "prompt": "turn it into a crisp autumn morning run with fallen leaves on the path"}
+      ]
+    },
+    {
+      "id": 4530,
+      "genre": "fragrance / lifestyle commercial",
+      "source_url": "https://assets.mixkit.co/videos/4530/4530-1080.mp4",
+      "video": "samples/raw/ad/fragrance_lavender_4530_9s.mp4",
+      "description": "Couple walking through a lavender field",
+      "variations": [
+        {"use_case": "Brand grade (dreamy fragrance)", "subtask": "global_style", "image_cfg": 2.0, "prompt": "grade it as a dreamy pastel fragrance film with soft glowing bloom"},
+        {"use_case": "Daypart / golden hour", "subtask": "change_weather", "image_cfg": 1.0, "prompt": "add a soft golden-hour haze with warm backlit sunlight"}
+      ]
+    }
+  ]
+}

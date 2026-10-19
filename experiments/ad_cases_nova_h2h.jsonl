@@ -1,0 +1,8 @@
+{"bench_id": "805_color", "edit_type": "change_color", "prompt": "change her dress from black to a deep ruby red", "video_path": "samples/raw/ad/fashion_dress_805_9s.mp4"}
+{"bench_id": "805_style", "edit_type": "global_style", "prompt": "apply a high-fashion editorial black-and-white grade with rich contrast", "video_path": "samples/raw/ad/fashion_dress_805_9s.mp4"}
+{"bench_id": "44546_daypart", "edit_type": "change_weather", "prompt": "make it a rainy downtown night with neon reflections on wet asphalt", "video_path": "samples/raw/ad/auto_camaro_44546_9s.mp4"}
+{"bench_id": "44546_color", "edit_type": "change_color", "prompt": "repaint the car in glossy metallic midnight blue", "video_path": "samples/raw/ad/auto_camaro_44546_9s.mp4"}
+{"bench_id": "40766_color", "edit_type": "change_color", "prompt": "change his running top to bright neon volt yellow", "video_path": "samples/raw/ad/sportswear_jogger_40766_9s.mp4"}
+{"bench_id": "40766_season", "edit_type": "change_weather", "prompt": "turn it into a crisp autumn morning run with fallen leaves on the path", "video_path": "samples/raw/ad/sportswear_jogger_40766_9s.mp4"}
+{"bench_id": "4530_style", "edit_type": "global_style", "prompt": "grade it as a dreamy pastel fragrance film with soft glowing bloom", "video_path": "samples/raw/ad/fragrance_lavender_4530_9s.mp4"}
+{"bench_id": "4530_daypart", "edit_type": "change_weather", "prompt": "add a soft golden-hour haze with warm backlit sunlight", "video_path": "samples/raw/ad/fragrance_lavender_4530_9s.mp4"}

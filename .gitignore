@@ -1,0 +1,29 @@
+# Upstream Aurora is cloned by scripts/setup.sh, not committed here
+/Aurora/
+# Model weights and large artifacts (downloaded during setup)
+models/
+*.safetensors
+*.pth
+*.whl
+wheels/
+# Inference outputs
+outputs/
+*.log
+build/
+# Videos are large and reproducible via scripts/ — not committed.
+*.mp4
+# Diagram sources — only the rendered PNG is committed.
+*.drawio
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+# Editor / IDE
+.vscode/
+# AI assistant scratch and notes (not part of the project)
+.claude/
+# Local scratch
+_research/
+.DS_Store

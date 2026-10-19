@@ -1,0 +1,7 @@
+env: dev
+stack_prefix: aurora-dev
+removal_policy: destroy
+tags:
+  Environment: dev
+  Project: aurora
+  ManagedBy: cdk
