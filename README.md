@@ -116,4 +116,4 @@ AWS_REGION=<region> ./scripts/run_experiments.sh   # plan + render with both pla
 - Source clips: free, commercial-use stock from [Mixkit](https://mixkit.co) (Mixkit Free License).
   Note Mixkit does not clear third-party elements (recognizable people, brands, trade dress) that
   appear in a clip — clear those rights before publishing edited footage in a real campaign.
-- This repository's own code is released under the MIT License (see [`LICENSE`](LICENSE)).
+- This repository's own code is released under the Apache License 2.0 (see [`LICENSE`](LICENSE)).
