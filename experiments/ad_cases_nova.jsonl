@@ -1,0 +1,8 @@
+{"bench_id": "805_color", "edit_type": "change_color", "prompt": "make the dress pop in a bold red", "video_path": "samples/raw/ad/fashion_dress_805_9s.mp4"}
+{"bench_id": "805_style", "edit_type": "global_style", "prompt": "give it a classy high-end magazine look", "video_path": "samples/raw/ad/fashion_dress_805_9s.mp4"}
+{"bench_id": "44546_daypart", "edit_type": "change_weather", "prompt": "make it look like a night shoot in the city", "video_path": "samples/raw/ad/auto_camaro_44546_9s.mp4"}
+{"bench_id": "44546_color", "edit_type": "change_color", "prompt": "i want the car in a cooler color", "video_path": "samples/raw/ad/auto_camaro_44546_9s.mp4"}
+{"bench_id": "40766_color", "edit_type": "change_color", "prompt": "give him a brighter more energetic top", "video_path": "samples/raw/ad/sportswear_jogger_40766_9s.mp4"}
+{"bench_id": "40766_season", "edit_type": "change_weather", "prompt": "make it feel like fall", "video_path": "samples/raw/ad/sportswear_jogger_40766_9s.mp4"}
+{"bench_id": "4530_style", "edit_type": "global_style", "prompt": "dreamy romantic perfume ad vibe", "video_path": "samples/raw/ad/fragrance_lavender_4530_9s.mp4"}
+{"bench_id": "4530_daypart", "edit_type": "change_weather", "prompt": "warmer sunset feeling", "video_path": "samples/raw/ad/fragrance_lavender_4530_9s.mp4"}

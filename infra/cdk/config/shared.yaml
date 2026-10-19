@@ -1,0 +1,6 @@
+project: aurora
+removal_policy: retain
+encryption: s3_managed
+versioning: true
+block_public_access: true
+enforce_ssl: true

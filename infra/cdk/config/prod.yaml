@@ -1,0 +1,7 @@
+env: prod
+stack_prefix: aurora-prod
+removal_policy: retain
+tags:
+  Environment: prod
+  Project: aurora
+  ManagedBy: cdk

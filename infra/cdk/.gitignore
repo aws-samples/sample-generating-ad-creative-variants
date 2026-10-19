@@ -1,0 +1,20 @@
+.env
+cdk.out/
+__pycache__/
+*.pyc
+.ash/ash_output/
+.mypy_cache/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+node_modules/
+# CDK context cache (embeds account IDs; regenerated on `cdk synth`)
+cdk.context.json
+# Coverage artifacts
+.coverage
+.coverage.*
+# Internal docs (TODO, ADRs) — not part of the public release
+docs/
+# ASH security-scanner config
+.ash/

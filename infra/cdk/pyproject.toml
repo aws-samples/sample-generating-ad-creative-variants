@@ -1,0 +1,66 @@
+[project]
+name = "aurora-cdk"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+# Lambda handler code (runtime, uses print()/boto3) is deployed as an asset,
+# not part of the strict-typed CDK app; exclude it from lint/format/type gates.
+# aurora-overlay/ and infra/ are bundled into the pipeline source zip only as
+# the worker Docker build context (see upload_source.sh); they are upstream/
+# runtime code, not part of the CDK app, so keep them out of the gates too.
+extend-exclude = ["lambdas", "aurora-overlay", "infra"]
+
+[tool.ruff.lint]
+select = [
+    "E",     # pycodestyle errors
+    "W",     # pycodestyle warnings
+    "F",     # pyflakes
+    "I",     # isort
+    "N",     # pep8-naming
+    "UP",    # pyupgrade
+    "B",     # flake8-bugbear
+    "A",     # flake8-builtins
+    "S",     # flake8-bandit
+    "T20",   # flake8-print
+    "SIM",   # flake8-simplify
+    "TCH",   # flake8-type-checking
+    "RUF",   # ruff-specific
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101"]
+"cdk_constructs/**/*.py" = ["A002"]
+"stacks/**/*.py" = ["A002"]
+"stages/**/*.py" = ["A002"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+# Exclude deployed Lambda handler assets from type checking (they use boto3 at
+# runtime and both index.py files would otherwise collide as duplicate modules).
+# Also exclude aurora-overlay/ and infra/ — they are only bundled into the
+# pipeline source zip as the worker Docker build context, not CDK app code.
+exclude = ['(^|/)lambdas/', '(^|/)aurora-overlay/', '(^|/)infra/', 'cdk\.out']
+
+[[tool.mypy.overrides]]
+module = ["aws_cdk.*", "constructs.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["cdk_constructs", "stacks", "stages", "deployment_config"]
+omit = ["tests/*"]
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
